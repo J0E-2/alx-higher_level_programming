@@ -18,8 +18,8 @@ def check(number):
         elif number % 10 < 6 and not 0:
             return(f"and is less than 6 and not 6")
 
+
 if number < 0:
-    print(f'Last digit of {number} is {-((-number) % 10)} {check(number)}')        
+    print(f'Last digit of {number} is {-((-number) % 10)} {check(number)}')
 else:
     print(f'Last digit of {number} is {number % 10} {check(number)}')
-    
