@@ -1,4 +1,2 @@
 #!/usr/bin/python3
-def print_q(a):
-    a = "#pythoniscool"
-    return(a)
+__import__("os").write(1, "#pythoniscool\n".encode("UTF-8"))
