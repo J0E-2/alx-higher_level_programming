@@ -11,4 +11,3 @@ def best_score(a_dictionary):
     for item in list(a_dictionary):
         if a_dictionary[item] == temp:
             return item
-
