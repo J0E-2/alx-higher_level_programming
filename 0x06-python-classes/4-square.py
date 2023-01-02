@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Define my class Square"""
+
+
 class Square:
     """create template of an instance"""
     def __init__(self, size=0):
