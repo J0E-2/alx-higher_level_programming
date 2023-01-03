@@ -50,7 +50,7 @@ class Rectangle:
     def perimeter(self):
         """Returns the rectangle perimeter if width or
         height is not 0"""
-        if self.__width < 0 or self.__height < 0:
+        if self.__width == 0 or self.__height == 0:
             return (0)
 
         else:
