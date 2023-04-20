@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""define function"""
 
 
 def append_write(filename="", text=""):
