@@ -1,38 +1,36 @@
 #!/usr/bin/python3
-"""
-Test driven development
-"""
-def matrix_divided(matrix, div):
-    """
-    function divides all elements of a matrix
-    
-    @matrix: matrix whose elements are to be divided
-    @div: integer to divide with
+"""Function divides all elements of a matrix
+   
+   Returns a New List
+   
+   matrix must be a list of lists of integers or floats otherwi   se raises an Exception"""
 
-    Returns: a new matrix
-    """
-    
-    if type(div) not in (int, float):
-        raise TypeError("div must be a number")
+def matrix_divided(matrix, div):
+    if not isinstance(matrix, list) or len(matrix) is 0 or matrix is None:
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
 
     if div == 0:
-        raise ZeroDivisionError("division by zero")
+        raise ZeroDivisionError('division by zero')
 
-    row_length = len(matrix[0])
+    if not isinstance(div, (int, float)):
+         raise TypeError('div must be a number')
 
-    new = []
+
     for row in matrix:
-        length = 0
-        newmatrix = []
+        len1 = len(matrix[0])
+        len2 = len(row)
+
+        if len(row) == 0:
+            raise TypeError('matrix must be a matrix (list \
+of lists) of integers/floats')
+
+        if len1 != len2:
+            raise TypeError('Each row of the matrix must have the same size')
+
         for col in row:
-            if type(col) not in (int, float):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            if type(matrix) is not list or not isinstance(col, (int, float)) or not isinstance(row, list):
+                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
 
-            newmatrix.append(round((col / div), 2))
-            length += 1
-
-        if length != row_length:
-            raise TypeError("Each row of the matrix must have the same size")
-        new.append(newmatrix)
-
-    return (new)
+ 
+    new = [[round(col / div, 2) for col in row if type(div) is int or float] for row in matrix if div != 0 and type(matrix) is list]
+    return new
