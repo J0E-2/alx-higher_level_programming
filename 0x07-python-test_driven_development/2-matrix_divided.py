@@ -6,6 +6,10 @@
    matrix must be a list of lists of integers or floats otherwi   se raises an Exception"""
 
 def matrix_divided(matrix, div):
+    """Function returns a new list of the divisions of matrix
+    
+    Runs some checks for error checking.
+    """
     if not isinstance(matrix, list) or len(matrix) is 0 or matrix is None:
         raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
 
