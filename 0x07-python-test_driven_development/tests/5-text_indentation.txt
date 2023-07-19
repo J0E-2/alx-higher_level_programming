@@ -1,0 +1,28 @@
+>>> indent = __import__('5-text_indentation').text_indentation
+>>> indent('Joseph.')
+Joseph.
+<BLANKLINE>
+
+>>> indent('if statement clause:.')
+if statement clause:
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> indent("can I ask you a question?")
+can I ask you a question?
+<BLANKLINE>
+
+>>> indent(2040)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> indent("will this work:")
+will this work:
+<BLANKLINE>
+
+>>> indent(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
