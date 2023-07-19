@@ -1,0 +1,37 @@
+>>> say = __import__('3-say_my_name').say_my_name
+>>> say('Joseph', 'Ndungu')
+My name is Joseph Ndungu
+
+>>> say('joe', 3)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say(3, 'ke')
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say(None, 'joe')
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say('joe')
+My name is joe 
+
+>>> say("", "") #doctest: +REPORT_NDIFF
+My name is 
+
+>>> say(None, None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say("@#$", "!@#$")
+My name is @#$ !@#$
+
+>>> say(12, 45)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
