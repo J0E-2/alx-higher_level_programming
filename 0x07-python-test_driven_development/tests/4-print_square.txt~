@@ -1,0 +1,28 @@
+>>> square = __import__('4-print_square').print_square
+>>> square(5) #doctest: +REPORT_NDIFF
+#####
+#####
+#####
+#####
+#####
+>>> square(-0.45)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> square("two")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> square(-10)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+>>> square(0) #doctest: +NORMALIZE_WHITESPACE
+
+>>> square(-3.14)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
