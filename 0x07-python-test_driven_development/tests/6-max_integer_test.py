@@ -22,5 +22,18 @@ class TestMaxInteger(unittest.TestCase):
         """Testcase for one element"""
         self.assertEqual(max_integer([40]), 40)
 
+    def test_negative_numbers(self):
+        self.assertEqual(max_integer([-1,-2,-85,-10]), -1)
+
+    def test_big_numbers(self):
+        temp_list = list(range(1000000))
+        self.assertEqual(max_integer(temp_list), 999999)
+
+    def test_floats(self):
+        self.assertEqual(max_integer([0.25, 0.45, 0.10, 0.4]), 0.45)
+
+    def test_negative_floats(self):
+        self.assertEqual(max_integer([-0.25, -0.45, -0.10, -0.4]), -0.1)
+
 if __name__ == '__main__':
     unittest.main()
