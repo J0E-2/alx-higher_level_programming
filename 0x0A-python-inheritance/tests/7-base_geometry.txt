@@ -1,0 +1,27 @@
+>>> bg = __import__('7-base_geometry').BaseGeometry
+
+>>> obj = bg()
+
+>>> obj.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+>>> obj.integer_validator("my_int", 12)
+
+>>> obj.integer_validator("width", 24)
+
+>>> obj.integer_validator("name", "john")
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+
+>>> obj.integer_validator("age", 0)
+Traceback (most recent call last):
+    ...
+ValueError: age must be greater than 0
+
+>>> obj.integer_validator("negative", -1)
+Traceback (most recent call last):
+    ...
+ValueError: negative must be greater than 0
