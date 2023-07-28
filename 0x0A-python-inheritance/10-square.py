@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 """
 import class to use as the base class (Rectangle)
+
+
 """
 Rectangle = __import__('9-rectangle'). Rectangle
 """
 class Rectangle inherits from Rectangle (9-rectangle.py)
+
+
 """
 class Square(Rectangle):
     """
