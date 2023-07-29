@@ -7,6 +7,7 @@ import BaseGeometry class from 7-base_geometry file
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     class inherits from our base class BaseGeometry
@@ -30,10 +31,9 @@ class Rectangle(BaseGeometry):
         """
         return self.__width * self.__height
 
-
     def __str__(self):
         """
-        returns '[Rectangle] <width>/<height>' when 
+        returns '[Rectangle] <width>/<height>' when
         used with print)
         """
         return f'[Rectangle] {self.__width}/{self.__height}'
