@@ -1,20 +1,12 @@
 #!/usr/bin/python3
-"""
-import class to use as the base class (Rectangle)
+"""import class to use as the base class (Rectangle)"""
 
-
-"""
 Rectangle = __import__('9-rectangle'). Rectangle
-"""
-class Rectangle inherits from Rectangle (9-rectangle.py)
 
 
-"""
 class Square(Rectangle):
-    """
-    Square has private attribute size
-    size has no getter or setter and is validated by
-    integer_validator"""
+    """class Rectangle"""
+
     def __init__(self, size):
         """Instatiation with size"""
         self.integer_validator("size", size)
@@ -22,5 +14,4 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def  area(self):
-        """area implementation"""
         return self.__size * self.__size
